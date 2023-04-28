@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void) {
+  int a=0,b=0,c=0,arr[]={2,4,7,35,8,75,37},x;
+  int len=sizeof(arr)/sizeof(arr[0]);
+  
+  for(int i=0;i<len;i++){
+    x=arr[i];
+    if(x>a){
+      c=b;
+      b=a;
+      a=x;
+    }
+    else if (x>b & x!=a){
+      c=b;
+      b=x;
+    }
+    else{
+      c=x;
+    }
+  }
+  printf("The three largest element elements is %d, %d, %d ",a,b,c);
+  return 0;
+}
